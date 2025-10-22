@@ -3,11 +3,11 @@ type Pokemon = {
 	imgSrc?: string;
 };
 
-type PokemonCardProps = {
+interface PokemonProps {
 	pokemon: Pokemon;
-};
+}
 
-function PokemonCard({ pokemon }: PokemonCardProps) {
+function PokemonCard({ pokemon }: PokemonProps) {
 	return (
 		<figure>
 			{pokemon.imgSrc ? (
