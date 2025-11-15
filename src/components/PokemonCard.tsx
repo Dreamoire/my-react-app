@@ -1,15 +1,13 @@
-const pokemonList = [
-	{
-		name: "bulbasaur",
-		imgSrc:
-			"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
-	},
-	{ name: "mew" },
-];
+type Pokemon = {
+	name: string;
+	imgSrc?: string;
+};
 
-function PokemonCard() {
-	const pokemon = pokemonList[0];
+type PokemonCardPops = {
+	pokemon: Pokemon;
+};
 
+function PokemonCard({ pokemon }: PokemonCardPops) {
 	return (
 		<figure>
 			{pokemon.imgSrc !== undefined ? (
