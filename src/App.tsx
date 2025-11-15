@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import NavBar from "./components/NavBar";
+import PokemonCard from "./components/PokemonCard";
 
 interface Pokemon {
 	name: string;
@@ -8,9 +9,39 @@ interface Pokemon {
 }
 
 const pokemonList: Pokemon[] = [
-	{ name: "bulbasaur" },
-	{ name: "charmander" },
-	{ name: "squirtle" },
+	{
+		name: "bulbasaur",
+		imgSrc:
+			"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
+	},
+	{
+		name: "charmander",
+		imgSrc:
+			"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png",
+	},
+	{
+		name: "squirtle",
+		imgSrc:
+			"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png",
+	},
+	{
+		name: "pikachu",
+		imgSrc:
+			"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
+	},
+	{
+		name: "eevee",
+		imgSrc:
+			"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/133.png",
+	},
+	{
+		name: "snorlax",
+		imgSrc:
+			"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/143.png",
+	},
+	{
+		name: "mew",
+	},
 ];
 
 function App() {
@@ -25,6 +56,8 @@ function App() {
 	return (
 		<div>
 			<NavBar pokemonList={pokemonList} setPokemonName={setPokemonName} />
+
+			<PokemonCard pokemon={pokemon} />
 		</div>
 	);
 }
